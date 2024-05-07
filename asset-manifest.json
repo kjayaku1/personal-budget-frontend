@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-budget-frontend/static/css/main.641441f8.css",
-    "main.js": "/personal-budget-frontend/static/js/main.d8c7170d.js",
+    "main.js": "/personal-budget-frontend/static/js/main.939b2fe7.js",
     "static/js/488.7cc47280.chunk.js": "/personal-budget-frontend/static/js/488.7cc47280.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/personal-budget-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/Montserrat-Bold.otf": "/personal-budget-frontend/static/media/Montserrat-Bold.a6bc51efd33e2f7f1b95.otf",
@@ -16,11 +16,11 @@
     "static/media/bg.webp": "/personal-budget-frontend/static/media/bg.c0e0fc9eaf6d4753b7b0.webp",
     "index.html": "/personal-budget-frontend/index.html",
     "main.641441f8.css.map": "/personal-budget-frontend/static/css/main.641441f8.css.map",
-    "main.d8c7170d.js.map": "/personal-budget-frontend/static/js/main.d8c7170d.js.map",
+    "main.939b2fe7.js.map": "/personal-budget-frontend/static/js/main.939b2fe7.js.map",
     "488.7cc47280.chunk.js.map": "/personal-budget-frontend/static/js/488.7cc47280.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.641441f8.css",
-    "static/js/main.d8c7170d.js"
+    "static/js/main.939b2fe7.js"
   ]
 }
