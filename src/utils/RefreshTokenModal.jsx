@@ -1,4 +1,3 @@
-import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ResetCount from "./resetCount";

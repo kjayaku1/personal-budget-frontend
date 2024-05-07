@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Navigate, Link, useLocation } from "react-router-dom";
+import { Navigate, Link, useLocation,useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { GlobalContext } from "../../context";
 import Logout from "../../utils/logout";
@@ -26,6 +26,7 @@ const menuList = [
 ];
 
 function PrivateRoute(Component, PostLoginLayout) {
+  const navigate = useNavigate();
   const location = useLocation();
   const {
     state: { isLoggedIn },
@@ -90,6 +91,12 @@ function PrivateRoute(Component, PostLoginLayout) {
                 className={`${
                   location.pathname === item?.to ? "active" : ""
                 } mt-2 mb-1 mx-2`}
+                
+              onClick={(e) => { 
+                navigate(item.to);                  
+                  e.preventDefault(); 
+                  // Prevent default behavior of anchor link
+                              }}
               >
                 {item?.icon}
                 {item?.text}
