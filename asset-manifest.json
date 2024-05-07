@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/personal-budget-frontend/static/css/main.641441f8.css",
+    "main.js": "/personal-budget-frontend/static/js/main.d8c7170d.js",
+    "static/js/488.7cc47280.chunk.js": "/personal-budget-frontend/static/js/488.7cc47280.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/personal-budget-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/Montserrat-Bold.otf": "/personal-budget-frontend/static/media/Montserrat-Bold.a6bc51efd33e2f7f1b95.otf",
+    "static/media/Montserrat-SemiBold.otf": "/personal-budget-frontend/static/media/Montserrat-SemiBold.b4f6721ba1a251742ea6.otf",
+    "static/media/Montserrat-Medium.otf": "/personal-budget-frontend/static/media/Montserrat-Medium.4b4a4b36283ebeb2cf89.otf",
+    "static/media/Montserrat-Regular.otf": "/personal-budget-frontend/static/media/Montserrat-Regular.65bc44fbf8204991497c.otf",
+    "static/media/Montserrat-Light.otf": "/personal-budget-frontend/static/media/Montserrat-Light.8c76b7212dc892314701.otf",
+    "static/media/fontawesome-webfont.eot": "/personal-budget-frontend/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/personal-budget-frontend/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/personal-budget-frontend/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/personal-budget-frontend/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/bg.webp": "/personal-budget-frontend/static/media/bg.c0e0fc9eaf6d4753b7b0.webp",
+    "index.html": "/personal-budget-frontend/index.html",
+    "main.641441f8.css.map": "/personal-budget-frontend/static/css/main.641441f8.css.map",
+    "main.d8c7170d.js.map": "/personal-budget-frontend/static/js/main.d8c7170d.js.map",
+    "488.7cc47280.chunk.js.map": "/personal-budget-frontend/static/js/488.7cc47280.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.641441f8.css",
+    "static/js/main.d8c7170d.js"
+  ]
+}
