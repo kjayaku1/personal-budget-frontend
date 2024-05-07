@@ -19,7 +19,7 @@ const onError = async ({ response }) => {
     try {
       const refreshToken = localStorage.getItem('refreshToken');
       if (refreshToken) {
-        const refreshResponse = await axios.post('/refresh/token', { refreshToken });
+        const refreshResponse = await httpClient.post('/refresh/token', { refreshToken });
         const { access_token } = refreshResponse.data;
         localStorage.setItem('authToken', access_token);
         localStorage.setItem("countdownSeconds", 60);

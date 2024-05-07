@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ResetCount from "./resetCount";
 import Logout from "./logout";
+import httpClient from "../api/http-client";
 
 function RefreshTokenModal({ isOpen, isClose }) {
   const handleClose = () => {
@@ -13,7 +14,7 @@ function RefreshTokenModal({ isOpen, isClose }) {
   const handleCallRefreshToken = async () => {
     const refreshToken = localStorage.getItem("refreshToken");
     if (refreshToken) {
-      const refreshResponse = await axios.post("/refresh/token", {
+      const refreshResponse = await httpClient.post("/refresh/token", {
         refreshToken,
       });
       const { access_token } = refreshResponse.data;
