@@ -1,8 +1,9 @@
-import { LOG_DATA, LOG_IN, SHOW_LOADER } from "./actions";
+import { LOG_DATA, LOG_IN, SHOW_LOADER, TIMER_COUNT } from "./actions";
 
 const initialState = {
   isLoggedIn: false,
   isLoggedData: {},
+  timerCountSeconds: 60,
 };
 
 const reducer = (state, { type, payload }) => {
@@ -18,6 +19,12 @@ const reducer = (state, { type, payload }) => {
         ...state,
         isLoggedData: payload,
       };
+    }
+    case TIMER_COUNT: {
+      return {
+        ...state,
+        timerCountSeconds: payload,
+      }
     }
     case SHOW_LOADER: {
       return {

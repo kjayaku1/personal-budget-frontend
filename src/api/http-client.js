@@ -22,8 +22,8 @@ const onError = async ({ response }) => {
         const refreshResponse = await httpClient.post('/refresh/token', { refreshToken });
         const { access_token } = refreshResponse.data;
         localStorage.setItem('authToken', access_token);
-        localStorage.setItem("countdownSeconds", 60);
-        // window.location.reload();
+        // localStorage.setItem("countdownSeconds", 60);
+        window.location.reload();
         // Retry the original request with the new access token
         const originalRequest = response.config;
         originalRequest.headers['Authorization'] = `Bearer ${access_token}`;

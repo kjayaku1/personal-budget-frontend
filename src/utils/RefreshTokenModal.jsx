@@ -1,12 +1,25 @@
+import { useContext, useEffect, useState } from "react";
+import { GlobalContext, actions } from "../context";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import ResetCount from "./resetCount";
+// import ResetCount from "./resetCount";
 import Logout from "./logout";
 import httpClient from "../api/http-client";
 
 function RefreshTokenModal({ isOpen, isClose }) {
+  const { dispatch } = useContext(GlobalContext);
+  const storeHandler = (type, payload) => dispatch({ type, payload });
+
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(isOpen);
+    // console.log('isOpen', isOpen);
+  }, [isOpen]);
+
   const handleClose = () => {
     isClose(false);
+    setShow(false);
     Logout();
   };
 
@@ -18,15 +31,18 @@ function RefreshTokenModal({ isOpen, isClose }) {
       });
       const { access_token } = refreshResponse.data;
       localStorage.setItem("authToken", access_token);
-      ResetCount();
+      // ResetCount();
+      storeHandler(actions.TIMER_COUNT, 60);
+      // localStorage.setItem("countdownSeconds", 60);
       isClose(false);
+      setShow(false);
     }
   };
 
   return (
     <>
       <Modal
-        show={isOpen}
+        show={show}
         backdrop="static"
         keyboard={false}
         centered
@@ -37,9 +53,15 @@ function RefreshTokenModal({ isOpen, isClose }) {
         </Modal.Header> */}
         <Modal.Body>
           <div className="p-2">
-            <p className="text-center">Token is expiring. Would you like to refresh it?</p>
+            <p className="text-center">
+              Token is expiring. Would you like to refresh it?
+            </p>
             <div className="d-flex align-items-center justify-content-center p-3">
-              <Button variant="secondary" onClick={handleClose} className="me-3" >
+              <Button
+                variant="secondary"
+                onClick={handleClose}
+                className="me-3"
+              >
                 No
               </Button>
               <Button variant="primary" onClick={handleCallRefreshToken}>

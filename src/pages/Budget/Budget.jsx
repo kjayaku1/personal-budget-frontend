@@ -141,7 +141,7 @@ function Budget() {
         title: data?.title,
         category: data?.category,
         amount: parseFloat(data?.amount),
-        date: new Date(selectedDate).toISOString(),
+        date: selectedDate.toISOString(),
       };
       // console.log(sendData);
       AuthServices.addBudgets(sendData)
@@ -220,7 +220,7 @@ function Budget() {
                     defaultValue={selectedDate}
                     value={selectedDate}
                     onChange={(event) => {
-                      setSelectedDate(event);
+                      setSelectedDate(moment(event).startOf('day'));
                       onChangBudgetDate(event);
                     }}
                   />

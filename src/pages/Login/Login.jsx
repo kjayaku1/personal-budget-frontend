@@ -31,13 +31,14 @@ function Login() {
         .then((res) => {
           storeHandler(actions.SHOW_LOADER, false);
           storeHandler(actions.LOG_IN, true);
+          storeHandler(actions.TIMER_COUNT, 60);
           localStorage.setItem("authToken", res.access_token);
           localStorage.setItem("refreshToken", res.refresh_token);
           localStorage.setItem("user_id", res.user_id);
           localStorage.setItem("userName", res.userName);
-          localStorage.setItem("countdownSeconds", 60);
+          // localStorage.setItem("countdownSeconds", 60);
           toast.success(res?.message);
-          // console.log("logedin", res);
+          // console.log("logined", res);
           setTimeout(() => {
             navigate("/dashboard");
           }, 1000);
